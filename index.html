@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandrav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav>
+            <div class="logo"><h1>Chandrav</h1></div>
+            <div class="nav-content">
+                <ul>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Skills">Skills</a></li>
+                    <li><a href="Project">Project</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="About">
+            <div class="sectionTitle">
+                <h1 class="AboutTitle">A B O U T</h1>
+            </div>
+            <div class="container">
+                <div class="about-information">
+                    <h1>Chandrav</h1>
+                    <p>Hello, my name is Dharma Chandra Viriya, I was born in Mataram, West Nusa Tenggara, Indonesia. I study at SMKN 2 Mataram majoring in Software Engineering. I want to become a Programmer.</p>
+
+                    <br><br>
+
+                    <h3>Graduate From:</h3>
+                    <p>Elementary School: SDN 25 Mataram<br>
+                        Junior High School: SMPK Kesuma Mataram
+                    </p>
+
+                    <br><br>
+
+                    <h3>Status:</h3>
+                    <p>Studied at SMKN 2 Mataram</p>
+                </div>
+                <div class="hero-img">
+                    <img class="hero-1" src="/img/hero.png" alt="Dharma Chandra Viriya">
+                    <img class="hero-2" src="/img/hero-2.png" alt="Dharma Chandra Viriya">
+                </div>
+            </div>
+        </div>
+
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
+
+        <div id="Skills">
+            <div class="sectionTitle">
+                <h1 class="SkillsTitle">S K I L L S</h1>
+            </div>  
+        </div>
+
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
+
+        <div id="Project">
+            <div class="sectionTitle">
+                <h1 class="ProjectTitle">P R O J E C T</h1>
+                <p class="ProjectDesc">This Is My Personal Project</p>
+            </div>
+            
+            <div class="carousel">
+                <span class="left"> &lt; </span>
+                    <div class="wrapper">
+                        <div class="container">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc1">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc2">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc3">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc4">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc5">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc6">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc7">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc8">
+                            <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc9">
+                        </div>
+                    </div>
+                <span class="right"> &gt; </span>
+            </div>
+
+            <div class="descContainer">
+                <p class="carouselDesc">These are some projects that I made personally when I was bored at home, hope you enjoyed!</p>
+            </div>
+        </div>
+
+        <div id="Contact">
+
+        </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.nav-content ul li a');
+            
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetSectionHref = this.getAttribute('href');
+                    const targetSection = document.getElementById(targetSectionHref);
+    
+                    if (targetSection) {
+                        const targetOffsetTop = targetSection.offsetTop;
+                        
+                        window.scrollTo({
+                            top: targetOffsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        //Carousel Slider
+        const container = document.querySelector('.wrapper .container');
+        const arrow = document.querySelectorAll('.carousel span');
+
+        arrow.forEach(function(scrollArrow) {
+            scrollArrow.addEventListener('click', function(){
+                if (scrollArrow.className == "right") {
+                    container.scrollBy({
+                        left: 1050,
+                        behavior: 'smooth'
+                    })
+                } else if (scrollArrow.className == "left") {
+                    container.scrollBy({
+                        left: -1050,
+                        behavior: 'smooth'
+                    })
+                }
+            })
+        })
+
+        //p Carousel Description
+        const img = document.querySelectorAll('.wrapper .container img');
+        const carouselP = document.getElementsByClassName('carouselDesc')[0];
+
+        const imageDescriptions = {
+            "desc1": "Coming Soon!",
+            "desc2": "Coming Soon!",
+            "desc3": "Coming Soon!",
+            "desc4": "Coming Soon!",
+            "desc5": "Coming Soon!",
+            "desc6": "Coming Soon!",
+            "desc7": "Coming Soon!",
+            "desc8": "Coming Soon!",
+            "desc9": "Coming Soon!"
+        };
+
+        img.forEach(function(gambar) {
+            gambar.addEventListener('mouseover', function() {
+                const desclink = gambar.getAttribute('desc');
+                carouselP.innerHTML = imageDescriptions[desclink];
+            })
+
+            gambar.addEventListener('mouseout', function() {
+                carouselP.innerHTML = "These are some projects that I made personally when I was bored at home, hope you enjoyed!";
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1E1E1E;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    background-color: #292929;
+    z-index: 10;
+}
+
+.nav-content ul {
+    display: flex;
+    gap: 45px;
+}
+
+.nav-content ul li {
+    list-style: none;
+}
+
+.nav-content ul li a {
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-content ul li a {
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.nav-content ul li a:hover {
+    background-color: white;
+    color: #1E1E1E;
+    opacity: 0.9;
+}
+
+#About {
+    width: 100%;
+    height: 900px;
+    padding-top: 60px;
+}
+
+.sectionTitle {
+    width: 100%;
+}
+
+.AboutTitle {
+    color: gold;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 40px;
+}
+
+#About .container {
+    width: 90%;
+    height: 600px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+}
+
+#About .about-information {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 35%;
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.2s;
+}
+
+#About .about-information:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#About .hero-img {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#About .hero-img:hover {
+    transform: rotate(2deg) translate(10px, -10px);
+}
+
+.hero-img .hero-1 {
+    width: 400px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-img .hero-2 {
+    width: 400px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#About .hero-img:hover .hero-1{
+    margin-bottom: 40px;
+}
+
+#About .hero-img:hover .hero-2{
+    margin-top: 40px;
+}
+
+#Skills {
+    width: 100%;
+    height: 900px;
+}
+
+.SkillsTitle {
+    text-align: center;
+    color: gold;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+#Project {
+    width: 100%;
+    height: 900px;
+}
+
+.ProjectTitle {
+    text-align: center;
+    color: gold;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.ProjectDesc {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 24px;
+    color: white;
+}
+
+#Project .container {
+    width: 100%;    
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#Project .container img {
+    height: 340px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 7.5px;
+}
+
+#Project .left {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+    background-color: white;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#Project .right {
+    width: 45px;
+    height: 45px;
+    font-size: 1.4rem;
+    background-color: white;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.descContainer {
+    max-width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.carouselDesc {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+#Contact {
+    width: 100%;
+    height: 900px;
+}
+
+.line-container {
+    width: 100%;
+    display: flex;
+    opacity: 0.6;
+    justify-content: center;
+}
+
+.line {
+    width: 80%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+}
