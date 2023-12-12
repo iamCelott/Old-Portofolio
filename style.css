@@ -199,6 +199,11 @@ nav {
     border-radius: 50px;
     cursor: pointer;
     margin-right: 20px;
+    transition: 0.2s;
+}
+
+#Project .left:hover {
+    opacity: 0.7;
 }
 
 #Project .right {
@@ -211,6 +216,11 @@ nav {
     border-radius: 50px;
     cursor: pointer;
     margin-left: 20px;
+    transition: 0.2s;
+}
+
+#Project .right:hover {
+    opacity: 0.7;
 }
 
 .descContainer {
