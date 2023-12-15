@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandrav</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
         <nav>
@@ -64,7 +65,12 @@
         <div id="Project">
             <div class="sectionTitle">
                 <h1 class="ProjectTitle">P R O J E C T</h1>
-                <p class="ProjectDesc">This Is My Personal Project</p>
+            </div>
+
+            <div class="carousel-line">
+                <div class="round"></div>
+                <input type="range" min="-1050" max="1050" id="midline">
+                <div class="round"></div>
             </div>
             
             <div class="carousel">
@@ -90,9 +96,30 @@
             </div>
         </div>
 
-        <div id="Contact">
+        <div class="line-container">
+            <div class="line"></div>
+        </div>
 
-            
+        <div id="Contact">
+            <div class="sectionTitle">
+                <h1 class="ContactTitle">C O N T A C T</h1>
+            </div>  
+
+            <div class="container">
+                <img src="img/ContactUs.jpg" alt="">
+                <div class="sidebar">
+                    <div class="sidebar-title">
+                        <h2>Have Some Question?</h2>
+                        <h2>ContactMe!</h2>
+                    </div>
+                    <form action="">
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type Your Message.." required></textarea>
+                        <button type="submit" id="btnSend" name="btnSend">Send!</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
     <script>
@@ -118,7 +145,7 @@
             });
         });
 
-        //Carousel Slider
+        //Carousel
         const container = document.querySelector('.wrapper .container');
         const arrow = document.querySelectorAll('.carousel span');
 
@@ -133,14 +160,15 @@
                     container.scrollBy({
                         left: -1050,
                         behavior: 'smooth'
-                    })
+                    })  
                 }
             })
         })
 
-        //p Carousel Description
+
         const img = document.querySelectorAll('.wrapper .container img');
         const carouselP = document.getElementsByClassName('carouselDesc')[0];
+        const range = document.getElementById('midline');
 
         const imageDescriptions = {
             "desc1": "Coming Soon!",
@@ -154,6 +182,12 @@
             "desc9": "Coming Soon!"
         };
 
+        range.addEventListener('input', function(){
+            const range = (this.value - this.min) / (this.max - this.min);
+            const scrollvalue = (container.scrollWidth - container.clientWidth) * range;
+            container.scrollLeft = scrollvalue;
+        })
+
         img.forEach(function(gambar) {
             gambar.addEventListener('mouseover', function() {
                 const desclink = gambar.getAttribute('desc');
@@ -165,6 +199,30 @@
             })
         })
 
+        //Contact Us
+        const input = document.querySelectorAll('.sidebar form input');
+        input.forEach(function(email){
+            email.addEventListener('click', function(e){
+            })
+        })
+
     </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "username",
+            Password : "password",
+            To : 'them@website.com',
+            From : "you@isp.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+             message => alert(message)
+        );
+
+    </script>
+
 </body>
 </html>
