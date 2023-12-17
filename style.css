@@ -22,6 +22,37 @@ nav {
     z-index: 10;
 }
 
+.hamburger-menu {
+    display: none;
+    height: 30px;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger-menu:hover {
+
+}
+
+#inputHamburger {
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
 .logo h1 {
     font-family: 'Delius Unicase', cursive;
 }
@@ -29,6 +60,7 @@ nav {
 .nav-content ul {
     display: flex;
     gap: 45px;
+    max-width: 30%;
 }
 
 .nav-content ul li {
@@ -65,7 +97,6 @@ nav {
 
 .sectionTitle {
     width: 100%;
-    font-family: 'Bree Serif', serif;
 }
 
 .AboutTitle {
@@ -196,7 +227,7 @@ nav {
     border-radius: 7.5px;
 }
 
-#Project .left {
+/* #Project .left {
     width: 45px;
     height: 45px;
     font-size: 1.4rem;
@@ -228,7 +259,7 @@ nav {
 
 #Project .right:hover {
     opacity: 0.7;
-}
+} */
 
 .descContainer {
     width: 70%;
@@ -327,6 +358,10 @@ nav {
     font-size: 37px;
 }
 
+.sidebar h2:last-child {
+    font-size: 30px;
+}
+
 .sidebar-title {
     width: 100%;
     display: flex;
@@ -354,7 +389,7 @@ nav {
     opacity: 1;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
 .round {
@@ -380,3 +415,20 @@ nav {
     -webkit-appearance: none;
     outline: none;
 }
+
+@Media (max-width: 768px) {
+    .nav-content ul {
+        gap: 20px;
+    }
+}
+
+@Media (max-width: 576px) {
+    .nav-content ul {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+

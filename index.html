@@ -18,6 +18,13 @@
                     <li><a href="Contact">Contact</a></li>
                 </ul>
             </div>
+
+            <div class="hamburger-menu">
+                <input type="checkbox" id="inputHamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
 
         <div id="About">
@@ -66,15 +73,9 @@
             <div class="sectionTitle">
                 <h1 class="ProjectTitle">P R O J E C T</h1>
             </div>
-
-            <div class="carousel-line">
-                <div class="round"></div>
-                <input type="range" min="-1050" max="1050" id="midline">
-                <div class="round"></div>
-            </div>
             
             <div class="carousel">
-                <span class="left"> &lt; </span>
+                <!-- <span class="left"> &lt; </span> -->
                     <div class="wrapper">
                         <div class="container">
                             <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc1">
@@ -88,7 +89,13 @@
                             <img src="img/ComingSoon.jpg" alt="Coming Soon!" desc="desc9">
                         </div>
                     </div>
-                <span class="right"> &gt; </span>
+                <!-- <span class="right"> &gt; </span> -->
+            </div>
+
+            <div class="carousel-line">
+                <div class="round"></div>
+                <input type="range" min="-1050" max="1050" id="midline">
+                <div class="round"></div>
             </div>
 
             <div class="descContainer">
@@ -147,23 +154,23 @@
 
         //Carousel
         const container = document.querySelector('.wrapper .container');
-        const arrow = document.querySelectorAll('.carousel span');
+        // const arrow = document.querySelectorAll('.carousel span');
 
-        arrow.forEach(function(scrollArrow) {
-            scrollArrow.addEventListener('click', function(){
-                if (scrollArrow.className == "right") {
-                    container.scrollBy({
-                        left: 1050,
-                        behavior: 'smooth'
-                    })
-                } else if (scrollArrow.className == "left") {
-                    container.scrollBy({
-                        left: -1050,
-                        behavior: 'smooth'
-                    })  
-                }
-            })
-        })
+        // arrow.forEach(function(scrollArrow) {
+        //     scrollArrow.addEventListener('click', function(){
+        //         if (scrollArrow.className == "right") {
+        //             container.scrollBy({
+        //                 left: 1050,
+        //                 behavior: 'smooth'
+        //             })
+        //         } else if (scrollArrow.className == "left") {
+        //             container.scrollBy({
+        //                 left: -1050,
+        //                 behavior: 'smooth'
+        //             })  
+        //         }
+        //     })
+        // })
 
 
         const img = document.querySelectorAll('.wrapper .container img');
