@@ -625,7 +625,7 @@ nav {
     }
 }
 
-@Media (max-width: 375px) {
+@Media (max-width: 400px) {
 
     #About {
         height: 630px;
@@ -646,14 +646,15 @@ nav {
         order: 1;
         margin-top: 0;
         margin-bottom: 10px;
+        padding: 15px;
     }
 
     .hero-img .hero-1 {
-        width: 125px;
+        width: 135px;
     }
     
     .hero-img .hero-2 {
-        width: 125px;
+        width: 135px;
     }
 
     #About .hero-img:hover .hero-1{
@@ -690,11 +691,6 @@ nav {
 
     .carouselDesc {
         font-size: 0.8rem;
-        padding: 20px;
-    }
-
-    .carouselDesc {
-        font-size: 1rem;
         padding: 20px;
     }
 
