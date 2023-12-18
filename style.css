@@ -112,6 +112,7 @@ nav {
     height: 600px;
     display: flex;
     margin: auto;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -392,14 +393,6 @@ nav {
     margin-top: 40px;
 }
 
-.round {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 1);
-    position: absolute;
-}
-
 .round:first-child {
     left: 9.1%;
 }
@@ -416,10 +409,116 @@ nav {
     outline: none;
 }
 
+#midline {
+    border-radius: 50px;
+}
+
 @Media (max-width: 768px) {
     .nav-content ul {
         gap: 20px;
     }
+
+    #About .container {
+        flex-direction: column;
+    }
+
+    #About .hero-img {
+        order: 1;
+        margin-top: 150px;
+    }
+
+    .satu {
+        margin-top: 100px;
+    }
+
+    #About .about-information {
+        order: 2;
+        width: 600px;
+        font-size: 15px;
+        border-left: 2px solid rgba(255, 255, 255, 0.25);
+        margin-top: 20px;
+    }
+
+    #About .about-information:hover {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .hero-img .hero-1 {
+        width: 300px;
+    }
+    
+    .hero-img .hero-2 {
+        width: 300px;
+    }
+
+    #Project{
+        height: 670px;
+    }
+
+    .carouselDesc {
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    #Project .container img {
+        height: 250px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 7.5px;
+    }
+
+    #midline {
+        width: 70%;
+    }
+
+    #Contact {
+        height: 600px;
+    }
+
+    #Contact .container {
+        width: 80%;
+        height: 350px;
+    }
+
+    #Contact .container img {
+        width: 50%;
+    }
+    
+    #Contact .sidebar {
+        width: 50%;
+        height: 100%;
+        background-color: #292929;
+    }
+    
+    /* .sidebar form input {
+
+    } */
+    
+    .sidebar form textarea {
+        height: 100px;
+    }
+    
+    .sidebar form #btnSend {
+        width: 27%;
+        height: 35px;
+        margin-top: 4px;
+    }
+    
+    .sidebar h2 {
+        font-size: 25px;
+    }
+    
+    .sidebar h2:last-child {
+        font-size: 20px;
+    }
+    
+    .sidebar-title {
+        padding: 10px;
+    }
+    
+    
 }
 
 @Media (max-width: 576px) {
@@ -429,6 +528,100 @@ nav {
 
     .hamburger-menu {
         display: flex;
+    }
+
+    #About .container {
+        flex-direction: column;
+    }
+
+    #About .hero-img {
+        order: 1;
+        margin-top: 30px;
+    }
+
+    #About .about-information {
+        order: 2;
+        width: 400px;
+        font-size: 14px;
+        border-left: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .satu {
+        margin-top: 0px;
+    }
+
+    .hero-img .hero-1 {
+        width: 200px;
+    }
+    
+    .hero-img .hero-2 {
+        width: 200px;
+    }
+
+    #About .hero-img:hover .hero-1{
+        margin-bottom: 20px;
+    }
+    
+    #About .hero-img:hover .hero-2{
+        margin-top: 20px;
+    }
+
+    #About .hero-img:hover {
+        transform: rotate(0deg);
+    }
+
+    .carouselDesc {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    #Contact {
+        height: 500px;
+    }
+
+    #Contact .container {
+        width: 80%;
+        height: 270px;
+    }
+
+    #Contact .container img {
+        width: 50%;
+    }
+    
+    #Contact .sidebar {
+        width: 50%;
+        height: 100%;
+        background-color: #292929;
+    }
+    
+    /* .sidebar form input {
+
+    } */
+    
+    .sidebar form textarea {
+        height: 80px;
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    .sidebar form #btnSend {
+        width: 27%;
+        height: 30px;
+        font-size: 15px;
+    }
+    
+    .sidebar h2 {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    
+    .sidebar h2:last-child {
+        font-size: 15px;
+    }
+
+    .sidebar form input {
+        height: 20px;
+        font-size: 12px;
     }
 }
 

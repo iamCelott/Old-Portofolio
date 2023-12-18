@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="line-container">
+        <div class="line-container satu">
             <div class="line"></div>
         </div>
 
@@ -93,9 +93,7 @@
             </div>
 
             <div class="carousel-line">
-                <div class="round"></div>
-                <input type="range" min="-1050" max="1050" id="midline">
-                <div class="round"></div>
+                <input type="range" min="0" max="10000" id="midline">
             </div>
 
             <div class="descContainer">
@@ -132,6 +130,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll('.nav-content ul li a');
+            range.value = 0
             
             navLinks.forEach(function (link) {
                 link.addEventListener('click', function (e) {
@@ -193,6 +192,7 @@
             const range = (this.value - this.min) / (this.max - this.min);
             const scrollvalue = (container.scrollWidth - container.clientWidth) * range;
             container.scrollLeft = scrollvalue;
+            console.log(scrollvalue);
         })
 
         img.forEach(function(gambar) {
