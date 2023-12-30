@@ -625,6 +625,85 @@ nav {
     }
 }
 
+@Media (max-width: 480px) {
+    #About {
+        height: 670px;
+    }
+
+    #About .container {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .AboutTitle {
+        padding-top: 35px;
+        padding-bottom: 35px
+    }
+
+    .hero-img .hero-1 {
+        width: 150px;
+    }
+    
+    .hero-img .hero-2 {
+        width: 150px;
+    }
+
+    #About .about-information {
+        width: 320px;
+        font-size: 12px;
+        padding: 10px;
+        margin-top: 0;
+        border-radius: 10px;
+    }
+
+    #Contact {
+        height: 450px;
+    }
+
+    #Contact .container {
+        width: 80%;
+        height: 210px;
+    }
+
+    #Contact .container img {
+        width: 50%;
+    }
+    
+    #Contact .sidebar {
+        width: 50%;
+        height: 100%;
+        background-color: #292929;
+    }
+
+    .sidebar form textarea {
+        height: 50px;
+        font-size: 7px;
+        padding: 2px;
+        margin-bottom: 5px;
+    }
+    
+    .sidebar form #btnSend {
+        width: 27%;
+        height: 20px;
+        font-size: 10px;
+    }
+    
+    .sidebar h2 {
+        font-size: 17px;
+        padding-left: 5px;
+    }
+    
+    .sidebar h2:last-child {
+        font-size: 14px;
+    }
+
+    .sidebar form input {
+        height: 15px;
+        font-size: 10px;
+    }
+
+}
+
 @Media (max-width: 400px) {
 
     #About {
